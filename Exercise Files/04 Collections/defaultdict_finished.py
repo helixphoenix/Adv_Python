@@ -9,7 +9,7 @@ def main():
               'apple', 'grape', 'banana', 'banana']
 
     # use a dictionary to count each element
-    fruitCounter = defaultdict(int)
+    fruitCounter = defaultdict(lambda: 100)
 
     # Count the elements in the list
     for fruit in fruits:

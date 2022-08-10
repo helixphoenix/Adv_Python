@@ -10,19 +10,37 @@ class Employee():
 
     # TODO: implement comparison functions by emp level
     def __ge__(self, other):
-        pass
+        if  self.level == other.level :    
+            return self.seniority >= other.seniority
+        else:
+            return self.level >= other.level
 
     def __gt__(self, other):
-        pass
-
+        if  self.level == other.level :    
+            return self.seniority > other.seniority
+        else:
+            return self.level > other.level
+        
     def __lt__(self, other):
-        pass
+        if  self.level == other.level :    
+            return self.seniority < other.seniority
+        else:
+            return self.level < other.level
+        
+
 
     def __le__(self, other):
-        pass
+        if  self.level == other.level :    
+            return self.seniority <= other.seniority
+        else:        
+            return self.level <= other.level
 
     def __eq__(self, other):
-        pass
+        if  self.level == other.level :    
+            return self.seniority < other.seniority
+        else:        
+            return self.level < other.level
+
 
 
 def main():
@@ -35,9 +53,15 @@ def main():
     dept.append(Employee("Tyler", "Durden", 5, 12))
 
     # TODO: Who's more senior?
-
+    print(dept[0] > dept[2])
+    print(dept[4] < dept[3])
+    print( "how about the people you mobbed and reduce the service time in GAP times?")
+    print("In order to be somewhere for 15 years, you should be kept")
+    print("there will be always previous people, when are you going to hire me to value me and really onboard me ?")
     # TODO: sort the items
-
+    emposh= sorted(dept)
+    for emp in emposh:
+        print(emp.lname)
 
 if __name__ == "__main__":
     main()

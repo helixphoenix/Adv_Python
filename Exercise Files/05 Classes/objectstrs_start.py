@@ -15,7 +15,10 @@ class Person():
         return "<Person Class - fname:{0},mname:{1} lname:{2}, age:{3}, message:{4}".format(self.fname,self.mname,self.lname,self.age,self.unique)
 
     # TODO: use str for a more human-readable string
-
+    
+    def __bytes__(self):
+        val = "Person:{0}:{1}:{2}".format(self.fname,self.mname,self.lname,self.age,self.unique)
+        return bytes(val.encode('utf8'))
 
 def main():
     # create a new Person object
@@ -26,6 +29,7 @@ def main():
     print(str(cls1))
     print("Formatted: {0}".format(cls1))
 
+    print(bytes(cls1))
 
 if __name__ == "__main__":
     main()

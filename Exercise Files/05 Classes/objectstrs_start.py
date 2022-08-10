@@ -12,7 +12,7 @@ class Person():
     # TODO: use __repr__ to create a string useful for debugging
     
     def __repr__(self):
-        return "<Person Class - fname:{0},mname:{1} lname:{2}, age:{3}".format(self.fname,self.mname,self.lname,self.age)
+        return "<Person Class - fname:{0},mname:{1} lname:{2}, age:{3}, message:{4}".format(self.fname,self.mname,self.lname,self.age,self.unique)
 
     # TODO: use str for a more human-readable string
 

@@ -23,14 +23,18 @@ def main():
 
     # using enumerate reduces code and provides a counter
     for i, m in enumerate(days, start=1):
-        print(i, m)
+        
+        print("this is enumerate:", i, m)
 
     # use zip to combine sequences
     for m in zip(days, daysFr):
+        print("this is zip:", i, m)
+        
         print(m)
 
     for i, m in enumerate(zip(days, daysFr), start=1):
         print(i, m[0], "=", m[1], "in French")
+        print("this is zip and enumerate:", i, m)
 
 
 if __name__ == "__main__":

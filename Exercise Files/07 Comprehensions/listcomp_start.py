@@ -7,11 +7,17 @@ def main():
     odds = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
     # TODO: Perform a mapping and filter function on a list
-
+    even_squared = list(map(lambda e: e**2, evens))
+    print(even_squared)
+    even_squared_filtered= list(map(lambda e : e**2, filter(lambda e: e>4 and e < 16,evens)))
+    print(list(even_squared_filtered))
+    
     # TODO: Derive a new list of numbers frm a given list
-
+    even_l_squared = [e **2 for e in evens]
+    print(even_l_squared)
+    
     # TODO: Limit the items operated on with a predicate condition
-
-
+    odds_squared_filtered= [ e ** 2 for e in odds if e > 3 and e < 17]
+    print(odds_squared_filtered)
 if __name__ == "__main__":
     main()
